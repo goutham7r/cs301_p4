@@ -16,9 +16,9 @@ def readData():
                 header=False
                 continue
             # key = rank
-            imdb_movie_data[int(row[0])] = {'Title':row[1],'Description':row[3],'Director':row[4],'Actors':row[5],'Year':int(row[6]),'Runtime':int(row[7]),'Rating':float(row[8]),'Revenue':float(row[9])}
+            imdb_movie_data[int(row[0])] = {'Title':row[1],'Genres':row[2],'Description':row[3],'Director':row[4],'Cast':row[5],'Year':int(row[6]),'Runtime':int(row[7]),'Rating':float(row[8]),'Revenue':float(row[9])}
             # key = title
-            imdb_movie_data[row[1]] = {'Rank':int(row[0]),'Description':row[3],'Director':row[4],'Actors':row[5],'Year':int(row[6]),'Runtime':int(row[7]),'Rating':float(row[8]),'Revenue':float(row[9])}
+            imdb_movie_data[row[1]] = {'Rank':int(row[0]),'Genres':row[2],'Description':row[3],'Director':row[4],'Cast':row[5],'Year':int(row[6]),'Runtime':int(row[7]),'Rating':float(row[8]),'Revenue':float(row[9])}
     return imdb_movie_data
 
 def getMovieData(field, MovieName=None, Rank=None):

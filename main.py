@@ -2,18 +2,8 @@ import csv
 import project
 import math
 
-# Function 0
-# We have coded a function below that prints out the camelCase version of the string input
-# Why do we have this? The students wont understand what is going on in the code, need knowledge of lists
-def printCamelCase(string): #better if variable name is not string, may be confusing to students
-    split = string.lower().split()
-    first = split[0].lower()
-    result = [first]
-    for word in split[1:]:
-        result.append(word.capitalize())
-    return ''.join(result)
 
-# Function
+# Function 0
 # We have coded a function below that converts a string to uppercase or lowercase
 def convertCase(original_string, case): 
     if case == "Upper":
@@ -62,11 +52,11 @@ def convertCase(original_string, case):
 
 
 # Function 5
-# Write the countMoviesByDirector(director_name, year) function here
-# Count the number of movies by the given director in the given year
-# This function should return an integer, the number of movies released by director_name in year
+# Write the countMoviesByDirector(director_name) function here
+# Count the number of movies by the given director
+# This function should return an integer, the number of movies released by director_name
 # Note: You shouldn't use print in this function.
-# Hint: For each movie in the dataset, check when it was released and who was the director
+# Hint: For each movie in the dataset, check who was the director
 
 
 
@@ -81,17 +71,16 @@ def convertCase(original_string, case):
 
 
 # Function 7
-# Write the findKeyword(movie_description) function here
-# Step1: Loop through all the rows of the dataset by index
-# Step2: Retrieve movie description using our getMovieData(field, MovieName=None, Rank=None) function
+# Write the findKeyword(plot_keyword, movie) function here
+# Step1: Retrieve movie description for the given movie
 # Step2: Use string find function check if the movie description has the desired plot keyword
-# Step3: If the keyword is present break out of your loop and return the movie name
+# Step3: If the keyword is present then return "Yes", otherwise "No"
 # Note: You shouldn't use print in this function.
 
 
 
 
-# Funstion 8
+# Function 8
 # Write the mainActor(movie) function here
 # Step1: Get the movie's cast by using our getMovieData function.
 # Step2: Retrieve the main actor's name by slicing the string. The main actor is listed first.
@@ -103,41 +92,94 @@ def convertCase(original_string, case):
 
 def main():
 
-    print("Problem 0")
-    print(" The camel case version of the string \"The Last Samurai\" is : ")
-    print(0)
-    print()
+    # In each of the below problems, edit only the print(0) statement.
 
+    # Read and understand Function 0 which we have written for you above. 
+    # Use it in Problems 1 and 2
     print("Problem 1")
-    print("Lets reverse the string \"Madagascar\" . The reversed string is : ")
+    print("The lowercase version of the string \"The Last Samurai\" is : ")
     print(0)
     print()
 
     print("Problem 2")
-    print("Is the string \"spacecaps\" a Palindrome : ")
+    print("The uppercase version of the string \"Fight Club\" is : ")
     print(0)
     print()
 
+    # Practice reading data from the dataset 
+    # (read and understand the instructions in the readme file carefully)
     print("Problem 3")
-    print("A movie whose name is a palindrome in the given dataset is : ")
+    print("The director of \"La La Land\" is : ")
     print(0)
     print()
 
     print("Problem 4")
-    print("Using the encodeString(original_string) we can convert the string \"Password\" to the string: ")
+    print("\"Sherlock Holmes\" was released in : ")
     print(0)
     print()
 
     print("Problem 5")
+    print("The cast of the movie ranked 320th in the dataset: ")
+    print(0)
+    print()
+
+    # Make sure you complete writing Function 1
+    print("Problem 6")
+    print("Lets reverse the string \"madagascar\". The reversed string is : ")
+    print(0)
+    print()
+
+    # Make sure you complete writing Function 2
+    print("Problem 7")
+    print("The string \"Spacecaps\" is a Palindrome ")
+    print(0)
+    print()
+
+    # Make sure you complete writing Function 3
+    print("Problem 8")
+    print("A movie whose name is a palindrome in the given dataset is : ")
+    print(0)
+    print()
+
+    # Make sure you complete writing Function 4
+    print("Problem 9")
     print("Using the encodeString(original_string) we can convert the string \"Password\" to the string: ")
     print(0)
     print()
 
-    print("Problem 6")
-    print("The total number of movies in the dataset that are directed by James Gunn are: ")
+    # Make sure you complete writing Function 5
+    print("Problem 10")
+    print("The total number of movies in the dataset that are directed by Christopher Nolan are: ")
     print(0)
     print()
 
+    # Make sure you complete writing Function 6
+    print("Problem 11")
+    print("The second-highest grossing movie of 2016 had a revenue of: ")
+    print(0)
+    print()
+
+    # Make sure you complete writing Function 7
+    print("Problem 12")
+    print("Is \"The Prestige\" a \"Mystery\" movie? ")
+    print(0)
+    print()
+
+    print("Problem 13")
+    print("Is \"Kimi no na wa\" a \"Fantasy\" movie? ")
+    print(0)
+    print()
+
+    # Make sure you complete writing Function 8
+    print("Problem 14")
+    print("The main actor in \"Black Swan\" is: ")
+    print(0)
+    print()
+
+    print("Problem 15")
+    print("The main actor in \"Inception\" is: ")
+    print(0)
+    print()
 
 
 
