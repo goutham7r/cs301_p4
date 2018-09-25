@@ -71,10 +71,10 @@ def convertCase(original_string, case):
 
 
 # Function 7
-# Write the findKeyword(plot_keyword, movie) function here
-# Step1: Retrieve movie description for the given movie
-# Step2: Use string find function check if the movie description has the desired plot keyword
-# Step3: If the keyword is present then return "Yes", otherwise "No"
+# Write the findKeyword(movie,genre) function here
+# Step1: Retrieve the movie genres for the given movie (There may be more than one, separated by commas)
+# Step2: Use string find function check if the genres has the desired genre
+# Step3: If the genre is present then return "Yes", otherwise "No"
 # Note: You shouldn't use print in this function.
 
 
@@ -84,7 +84,7 @@ def convertCase(original_string, case):
 # Write the mainActor(movie) function here
 # Step1: Get the movie's cast by using our getMovieData function.
 # Step2: Retrieve the main actor's name by slicing the string. The main actor is listed first.
-# Step2: Return the string containing the main actor's name
+# Step3: Return the string containing the main actor's name
 # Note: You shouldn't use print in this function.
 
 
