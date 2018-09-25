@@ -31,11 +31,8 @@ def convertCase(original_string, case):
 # This function should return the reversed version of original_string
 # For example, if original_string was equal to "mary", the function should return "yram"
 # Note: You shouldn't use print in this function.
-def reverseString(original_string):
-    reversed_string = ""
-    for i in range(len(original_string)):
-        reversed_string = original_string[i] + reversed_string
-    return reversed_string
+
+
 
 
 # Function 2
@@ -43,9 +40,7 @@ def reverseString(original_string):
 # This function should return True if original_string is a palindrome, otherwise False.
 # Note: You shouldn't use print in this function.
 # Hint: Use the function you have defined above!
-def checkPalindrome(original_string):
-    reversed_string = reverseString(original_string)
-    return original_string.lower()==reversed_string.lower()
+
 
 
 # Function 3
@@ -54,30 +49,16 @@ def checkPalindrome(original_string):
 # Note: There is only one such movie in the dataset!
 # Note: You shouldn't use print in this function.
 # Hint: Use the function you have defined above!
-def findPalindromeMovieName():
-    for i in range(1,1001):
-        movie_title = project.getMovieData('Title',Rank=i)
-        if checkPalindrome(movie_title):
-            return movie_title
+
+
+
 
 # Function 4
 # Write the encodeString(original_string) function here
 # Replace all 'A' and a' with '@', all 'O' and 'o' with '0' and all 'I' and 'i' with '!'
 # This function should return the original_string, after encoding it
 # Note: You shouldn't use print in this function.
-def encodeString(original_string):
-    encoded_string = ""
-    for i in range(len(original_string)):
-        c = original_string[i]
-        if c=='A' or c=='a':
-            encoded_string = encoded_string + '@'
-        elif c=='O' or c=='o':
-            encoded_string = encoded_string + '0'
-        elif c=='I' or c=='i':
-            encoded_string = encoded_string + '!'
-        else:
-            encoded_string = encoded_string + c
-    return encoded_string
+
 
 
 # Function 5
@@ -86,13 +67,8 @@ def encodeString(original_string):
 # This function should return an integer, the number of movies released by director_name in year
 # Note: You shouldn't use print in this function.
 # Hint: For each movie in the dataset, check when it was released and who was the director
-def countMoviesByDirector(director_name):
-    count = 0
-    for i in range(1,1001):
-        movie_dir = project.getMovieData('Director',Rank=i)
-        if movie_dir==director_name:
-            count = count + 1
-    return count
+
+
 
 # Function 6
 # Write the findSecondHighestRevenue(year) function here
@@ -100,23 +76,8 @@ def countMoviesByDirector(director_name):
 # Note: You shouldn't use print in this function
 # Hint: For each movie in the dataset, check when it was released and its revenue
 # Hint: To find the second highest revenue, you may need to also keep track of the highest revenue!
-def findSecondHighestRevenue(year):
-    highest = 0
-    second_highest = 0
-    for i in range(1,1001):
-        movie_year = project.getMovieData('Year',Rank=i)
-        movie_rev = project.getMovieData('Revenue',Rank=i)
-        if movie_year==year:
-            if movie_rev>highest:
-                second_highest = highest
-                highest = movie_rev
-            elif movie_rev>second_highest:
-                second_highest = movie_rev
-            else:
-                continue
-        else:
-            continue
-    return second_highest
+
+
 
 
 # Function 7
@@ -126,13 +87,9 @@ def findSecondHighestRevenue(year):
 # Step2: Use string find function check if the movie description has the desired plot keyword
 # Step3: If the keyword is present break out of your loop and return the movie name
 # Note: You shouldn't use print in this function.
-def findKeyword(keyword):
-    for i in range(1,1001):
-        movie = project.getMovieData("Title",Rank=i)
-        description = project.getMovieData("Description",Rank=i)
-        if description.lower().find(keyword.lower())!=-1:
-            return movie
-    return False
+
+
+
 
 # Funstion 8
 # Write the mainActor(movie) function here
@@ -141,11 +98,8 @@ def findKeyword(keyword):
 # Step2: Return the string containing the main actor's name
 # Note: You shouldn't use print in this function.
 
-def mainActor(movie):
-    cast = project.getMovieData("Actors", MovieName=movie)
-    index = cast.find(',')
-    main_actor = cast[0:index]
-    return main_actor
+
+
 
 def main():
 
@@ -189,10 +143,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    #print(reverseString("Hello"))
-    #isPalidrome()
-    #project.describe_data()
-    print(mainActor("Gold"))
-    print(countMoviesByDirector("James Gunn"))
-    #print(printCamelCase("You have got Mail"))
-    print(project.getMovieData("Description", MovieName="Gold", Rank=None))
